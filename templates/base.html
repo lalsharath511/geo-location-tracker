@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+<link href="{% static 'style.css' %}" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+<body>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="{% static '/ab.jpg' %}" alt=""/>
+                        
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                                <h5>
+                                    GeoLocation Tracker
+                                </h5>
+                                <h6>
+                                    Developed by sharath lal
+                                </h6>
+                                <p class="proile-rating">Your IP Address is : <span>{{ data.query }}</span></p>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active " id="home-tab" data-toggle="tab" href="index" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            </li>
+                            
+                           
+                        </ul>
+                    </div>
+                </div>
+                <form method="POST" class="post-form" action="">  
+                    {% csrf_token %}
+                <div class="col-md-2">
+                    <input type="search" class="form-control rounded" placeholder="Track with IP..." aria-label="Search" name='ipaddress' aria-describedby="search-addon" />
+                    <button type="submit" class="btn btn-outline-primary">search</button>
+                  </div>
+                </form> 
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <p> ABOUT ME</p>
+                        <a href="">Website</a><br/>
+                        <p>SKILLS</p>
+                        <a href="">Web Developer</a><br/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    {% block content %}
+    {% endblock %}
+    
+</div>
+</form>           
+</div>
+</body>
+</html>

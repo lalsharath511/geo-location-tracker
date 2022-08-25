@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    
+               
+<div class="row">
+    <div class="col-md-6">
+        <label>Country</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.country }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <label>Region Name</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.regionName }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <label>City</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.city}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <label>Zip code</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.zip }}</p>
+    </div>
+</div>
+
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <label>Time Zone</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.timezone }}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <label>Latitude</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.lat}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <label>Longitude</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.lon}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <label>Internet Service Provider</label>
+    </div>
+    <div class="col-md-6">
+        <p>{{ data.isp}}</p>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+{% endblock %}
+
+
+
